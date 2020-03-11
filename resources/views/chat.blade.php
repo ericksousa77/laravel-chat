@@ -2,6 +2,14 @@
 
 @section('content')
 
+<script>
+    $(document).ready(function() {
+     setInterval(function() {
+      $('#res').load('{{ action('ChatsController@index') }}');
+     }, 10);
+    });
+</script>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
