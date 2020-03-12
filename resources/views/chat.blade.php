@@ -2,13 +2,6 @@
 
 @section('content')
 
-<script>
-    $(document).ready(function() {
-     setInterval(function() {
-      $('#res').load('{{ action('ChatsController@index') }}');
-     }, 10);
-    });
-</script>
 
 <div class="container">
     <div class="row">
@@ -28,5 +21,8 @@
             </div>
         </div>
     </div>
+    <script>setTimeout(function(){
+        location.reload();
+    },10000); // 5000 milliseconds means 10 seconds.</script>
 </div>
 @endsection
